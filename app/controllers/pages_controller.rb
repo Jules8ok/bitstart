@@ -9,4 +9,7 @@ class PagesController < ApplicationController
 
   def prices
   end
+
+  def sources
+  end
 end
