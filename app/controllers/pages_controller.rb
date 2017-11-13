@@ -3,4 +3,10 @@ class PagesController < ApplicationController
 
   def home
   end
+
+  def donation
+  end
+
+  def prices
+  end
 end
