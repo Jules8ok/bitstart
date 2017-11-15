@@ -49,6 +49,7 @@ GEM
     builder (3.2.3)
     byebug (9.1.0)
     coderay (1.1.2)
+    coinbase (4.1.0)
     concurrent-ruby (1.0.5)
     crass (1.0.2)
     devise (4.3.0)
@@ -206,6 +207,7 @@ PLATFORMS
 DEPENDENCIES
   autoprefixer-rails
   bootstrap-sass
+  coinbase
   devise
   figaro
   font-awesome-sass

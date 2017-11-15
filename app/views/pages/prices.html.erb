@@ -1,43 +1,28 @@
-<div class="container-fluid">
-  <div class="row">
-            <div class="col-md-12">
-<h1 class="text-center">Bitcoin Price</h1>
-</div>
-  </div>
-  <div class="row">
-    <div class="col-md-3 col-md-offset-1 col-sm-4">
-<h2 class="text-center usd-price"></h2>
-</div>
-        <div class="col-md-4">
-<h2 class="text-center gbp-price"></h2>
-</div>
-        <div class="col-md-3 col-sm-4">
-<h2 class="text-center aud-price"></h2>
-</div>
-  </div>
-  <div class="row">
-  <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 prices">
-  </div>
-  </div>
-</div>
+<% require 'coinbase/wallet'
 
-<style>
-  body {
+client = Coinbase::Wallet::Client.new(api_key: 'a39d5d67b37ecf3eedebc166688bdbfb2bd59bef6f53653eb343017db64d4e1b',
+  api_secret: '4eb1e71269ce9907dfbfa998b8a3b904483e4cc450ce268a1bd81543cfb5c5ff',
+  CB_VERSION: 'YYYY-MM-DD')
 
-}
+    currency_code = 'USD'  # can also use EUR, CAD, etc.
 
-h1 {
-  font-size: 60px;
-  margin-bottom: 30px;
-}
+    # Make the request
+    price = client.spot_price({currency: currency_code})
+    price_usd = price.amount
 
-.table {
-    border-radius: 5px;
-    width: 50%;
-    margin: 0 auto;
-    margin-top: 30px;
-    margin-bottom: 30px;
-    float: none;
-}
-</style>
+    %>
 
+
+    <%=  "Current bitcoin price in #{currency_code}: #{price.amount}" %>
+    <br><br>
+
+    <%     currency_code = 'EUR'  # can also use EUR, CAD, etc.
+
+    # Make the request
+    price = client.spot_price({currency: currency_code})
+
+
+    %>
+
+
+    <%=  "Current bitcoin price in #{currency_code}: #{price.amount}" %>

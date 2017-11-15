@@ -1,3 +1,149 @@
-hello ici un convertisseur
+<% require 'coinbase/wallet'
+
+client = Coinbase::Wallet::Client.new(api_key: 'a39d5d67b37ecf3eedebc166688bdbfb2bd59bef6f53653eb343017db64d4e1b',
+  api_secret: '4eb1e71269ce9907dfbfa998b8a3b904483e4cc450ce268a1bd81543cfb5c5ff',
+  CB_VERSION: 'YYYY-MM-DD')
+
+    currency_code = 'USD'  # can also use EUR, CAD, etc.
+
+    # Make the request
+    price = client.spot_price({currency: currency_code})
+    price_usd = price.amount
+
+    %>
 
 
+    <%  "Current bitcoin price in #{currency_code}: #{price.amount}" %>
+    <br><br>
+
+    <%     currency_code = 'EUR'  # can also use EUR, CAD, etc.
+
+    # Make the request
+    price = client.spot_price({currency: currency_code})
+
+
+    %>
+
+
+    <%  "Current bitcoin price in #{currency_code}: #{price.amount}" %>
+
+    <div class="converter_place text-center">
+      <div class="container1.13">
+        <h1>BTC to USD</h1>
+        <div class="basefont"><p>Price:</p><input type="text" class="chosen" value="<%=price_usd%>" placeholder="<%=price_usd%>">USD</div>
+        <div class="px-em">
+          <div class="px"><input type="text" class ="input px-input" placeholder="0"/><div class="text">usd</div></div>
+          <div class="em"><input type="text" class ="input em-input" placeholder="0"/><div class="text">btc</div></div>
+        </div>
+
+      </div>
+    </div>
+    <style>
+    .converter_place {
+      height: 50%;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding-top: 5em;
+      font-family: 'Raleway';
+    }
+    .container {
+      height: 50%;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding-top: 5em;
+      font-family: 'Raleway';
+
+      h1 {
+        font-size: 5.85rem;
+        padding: 0 0 .2em 0;
+        margin: 0;
+      }
+    }
+
+    .input {
+      border-top: none;
+      border-left: none;
+      border-right: none;
+      padding-top: .4em;
+      border-bottom: 1px dotted #000;
+      outline: none;
+      width: 150px;
+      font-size: 3rem;
+      text-align: right;
+      margin-right: .3em;
+      background-color: #f4f4f4;
+      outline: none;
+
+      &::-webkit-input-placeholder {
+        color: #000;
+        opacity: .2;
+      }
+    }
+
+    .px-em {
+      display: flex;
+    }
+
+    .px, .em {
+      font-size: 2rem;
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-end;
+
+      .text {
+        padding-bottom: .2em;
+      }
+    }
+
+    .em {
+      margin-left: 1em;
+
+      .text {
+        margin-right: -.3em;
+      }
+    }
+
+    .px-input {
+      width: 95px;
+    }
+
+    .basefont {
+      display: flex;
+      align-items: baseline;
+      font-family: 'Raleway';
+      font-size: 2.3rem;
+      padding: 0 0 .2em 0;
+      margin: 0;
+      border-bottom: 1px solid transparent;
+
+      p {
+        margin: 0;
+        padding: 0;
+      }
+
+      .chosen {
+        width: 80px;
+        border-top: none;
+        border-right: none;
+        border-left: none;
+        margin-left: .2em;
+        margin-right: .2em;
+        font-size: 3.3rem;
+        text-align: center;
+        border-bottom: 2px dotted #000;
+        background-color: #FF90B3;
+        outline: none;
+
+        &::-webkit-input-placeholder {
+          color: #000;
+          opacity: .2;
+        }
+      }
+    }
+  </style>

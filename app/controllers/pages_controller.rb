@@ -12,4 +12,7 @@ class PagesController < ApplicationController
 
   def sources
   end
+
+  def converter
+  end
 end
