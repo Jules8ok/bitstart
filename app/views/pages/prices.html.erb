@@ -8,7 +8,7 @@ client = Coinbase::Wallet::Client.new(api_key: 'a39d5d67b37ecf3eedebc166688bdbfb
 
     # Make the request
     price = client.spot_price({currency: currency_code})
-    price_usd = price.amount
+    price_usd_btc = price.amount
 
     %>
 
@@ -20,7 +20,7 @@ client = Coinbase::Wallet::Client.new(api_key: 'a39d5d67b37ecf3eedebc166688bdbfb
 
     # Make the request
     price = client.spot_price({currency: currency_code})
-
+    price_eur_btc = price.amount
 
     %>
 
