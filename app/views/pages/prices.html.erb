@@ -13,7 +13,7 @@ client = Coinbase::Wallet::Client.new(api_key: 'a39d5d67b37ecf3eedebc166688bdbfb
     %>
 
 
-    <%=  "Current bitcoin price in #{currency_code}: #{price.amount}" %>
+    <%  "Current bitcoin price in #{currency_code}: #{price.amount}" %>
     <br><br>
 
     <%     currency_code = 'EUR'  # can also use EUR, CAD, etc.
@@ -25,23 +25,26 @@ client = Coinbase::Wallet::Client.new(api_key: 'a39d5d67b37ecf3eedebc166688bdbfb
     %>
 
 
-    <%=  "Current bitcoin price in #{currency_code}: #{price.amount}" %>
+    <%  "Current bitcoin price in #{currency_code}: #{price.amount}" %>
 
 
+    <div class="graph">
+      <h1>Live Bitcoin Data</h1>
+      <div id="placeholder3"></div>
 
-  <h1>Live Bitcoin Data</h1>
-    <div id="placeholder3"></div>
+      <div id="placeholder"></div>
+      <div class="btcwdgt-chart" bw-theme="light"><script>
+        (function(b,i,t,C,O,I,N) {
+          window.addEventListener('load',function() {
+            if(b.getElementById(C))return;
+            I=b.createElement(i),N=b.getElementsByTagName(i)[0];
+            I.src=t;I.id=C;N.parentNode.insertBefore(I, N);
+          },false)
+        })(document,'script','https://widgets.bitcoin.com/widget.js','btcwdgt');
+      </script></div>
 
-    <div id="placeholder"></div>
-    <div class="btcwdgt-chart" bw-theme="light"><script>
-      (function(b,i,t,C,O,I,N) {
-      window.addEventListener('load',function() {
-      if(b.getElementById(C))return;
-      I=b.createElement(i),N=b.getElementsByTagName(i)[0];
-      I.src=t;I.id=C;N.parentNode.insertBefore(I, N);
-    },false)
-  })(document,'script','https://widgets.bitcoin.com/widget.js','btcwdgt');
-</script></div>
+    </div>
 
 
+    <br><br><br>
 
