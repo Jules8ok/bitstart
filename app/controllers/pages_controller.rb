@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:home]
+  skip_before_action :authenticate_user!, only: [:home, :donation, :prices, :sources, :converter, :tutorial]
 
   def home
   end
@@ -14,5 +14,8 @@ class PagesController < ApplicationController
   end
 
   def converter
+  end
+
+  def tutorial
   end
 end

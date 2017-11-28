@@ -45,7 +45,12 @@
       </div>
     </div>
     <% else %>
+
     <!-- Login link (when logged out) -->
+    <%= link_to "Buy bitcoin", "/pages/tutorial", class: "navbar-wagon-item navbar-wagon-link" %>
+    <%= link_to "Prices", "/pages/prices", class: "navbar-wagon-item navbar-wagon-link" %>
+    <%= link_to "Converter", "/pages/converter", class: "navbar-wagon-item navbar-wagon-link" %>
+    <%= link_to "Sources", "/pages/sources", class: "navbar-wagon-item navbar-wagon-link" %>
     <%= link_to t(".sign_in", default: "Login"), new_user_session_path, class: "navbar-wagon-item navbar-wagon-link" %>
     <% end %>
   </div>
