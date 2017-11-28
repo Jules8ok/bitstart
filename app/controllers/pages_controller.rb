@@ -18,4 +18,11 @@ class PagesController < ApplicationController
 
   def tutorial
   end
+
+  def advices
+  end
+
+  def lexique
+  end
+
 end
