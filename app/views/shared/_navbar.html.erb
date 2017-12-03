@@ -10,11 +10,11 @@
     <% if user_signed_in? %>
 
     <!-- Links when logged in -->
-
+    <%= link_to "Wiki", "/pages/advices", class: "navbar-wagon-item navbar-wagon-link" %>
     <%= link_to "Buy bitcoin", "/pages/tutorial", class: "navbar-wagon-item navbar-wagon-link" %>
     <%= link_to "Prices", "/pages/prices", class: "navbar-wagon-item navbar-wagon-link" %>
     <%= link_to "Converter", "/pages/converter", class: "navbar-wagon-item navbar-wagon-link" %>
-
+    <%= link_to "Lexique", "/pages/lexique", class: "navbar-wagon-item navbar-wagon-link" %>
     <%= link_to "Sources", "/pages/sources", class: "navbar-wagon-item navbar-wagon-link" %>
 
     <!-- Avatar with dropdown menu -->
@@ -52,7 +52,7 @@
     <%= link_to "Buy bitcoin", "/pages/tutorial", class: "navbar-wagon-item navbar-wagon-link" %>
     <%= link_to "Prices", "/pages/prices", class: "navbar-wagon-item navbar-wagon-link" %>
     <%= link_to "Converter", "/pages/converter", class: "navbar-wagon-item navbar-wagon-link" %>
-
+    <%= link_to "Lexique", "/pages/lexique", class: "navbar-wagon-item navbar-wagon-link" %>
       <%= link_to "Sources", "/pages/sources", class: "navbar-wagon-item navbar-wagon-link" %>
     <%= link_to t(".sign_in", default: "Login"), new_user_session_path, class: "navbar-wagon-item navbar-wagon-link" %>
     <% end %>
