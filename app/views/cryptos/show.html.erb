@@ -1,0 +1,11 @@
+<h3 class="text-center" ><%= @crypto.name %> </h3>
+<br>
+<br>
+<h4 > Description </h4>
+<%= @crypto.description %>
+<br><br>
+<h4 > Dates </h4>
+<%= @crypto.date %>
+<br><br>
+<%= link_to "Edit", edit_crypto_path %> |
+<%= link_to "Back", cryptos_path %>

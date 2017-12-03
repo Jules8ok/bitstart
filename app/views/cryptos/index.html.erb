@@ -1,0 +1,27 @@
+
+<div class="wrapper-grey padded">
+  <div class="container1">
+    <h2 class="text-center searchby1">Les cryptos <br><br><br></h2>
+    <% @cryptos.each do |crypto| %>
+    <div class="row1">
+      <div class="col-xs-12 col-sm-4">
+
+        <div class="card1" style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2))">
+          <div class="card1-description">
+            <h2><%=crypto.name%></h2>
+            <p><%= crypto.address%></p>
+          </div>
+          <%= link_to t(".button", default: "Take a look"), crypto_path(crypto), class: "card-link" %>
+        </div>
+      </div>
+      <% end %>
+    </div>
+
+  </div>
+
+</div>
+
+<br> <br> <br><br> <br> <br><br> <br> <br> <br> <br> <br><br> <br>
+<%= link_to "Add a new crypto", new_crypto_path %>
+
+
