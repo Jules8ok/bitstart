@@ -8,7 +8,7 @@
         <div class="card1" style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2))">
           <div class="card1-description">
             <h2><%=crypto.name%></h2>
-            <p><%= crypto.address%></p>
+            <p style="font-size: 12px;"><%= crypto.address%></p>
           </div>
           <%= link_to t(".button", default: "Take a look"), crypto_path(crypto), class: "card-link" %>
         </div>
