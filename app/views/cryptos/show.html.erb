@@ -23,6 +23,31 @@ JSON.parse(response)
 <%= @my_hash[0]["price_btc"] %> BTC <br>
 
 <%= @my_hash[0]["price_usd"] %> $ <br>
+Percent change 1H:
+<% if @my_hash[0]["percent_change_1h"][0] == "-"%>
+<span style="color: red;">
+<%= @my_hash[0]["percent_change_1h"] %>%</span> <br>
+<% else%>
+<span style="color: green;">
+<%= @my_hash[0]["percent_change_1h"] %>%</span> <br>
+<%end %>
+Percent change 24h:
+<% if @my_hash[0]["percent_change_24h"][0] == "-"%>
+<span style="color: red;">
+<%= @my_hash[0]["percent_change_24h"] %>%</span> <br>
+<% else%>
+<span style="color: green;">
+<%= @my_hash[0]["percent_change_24h"] %>%</span> <br>
+<%end %>
+Percent change 7days:
+<% if @my_hash[0]["percent_change_7d"][0] == "-"%>
+<span style="color: red;">
+<%= @my_hash[0]["percent_change_7d"] %>%</span> <br>
+<% else%>
+<span style="color: green;">
+<%= @my_hash[0]["percent_change_7d"] %>%</span> <br>
+<%end %>
+
 24h volume:
 <%= @my_hash[0]["24h_volume_usd"] %> $ <br>
 Market cap:
@@ -31,15 +56,10 @@ Available Supply:
 <%= @my_hash[0]["available_supply"] %> <br>
 Total Supply:
 <%= @my_hash[0]["total_supply"] %> <br>
-Percent change 1H:
-<%= @my_hash[0]["percent_change_1h"] %> %<br>
-Percent change 24h:
-<%= @my_hash[0]["percent_change_24h"] %> %<br>
-Percent change 7days:
-<%= @my_hash[0]["percent_change_7d"] %> %<br>
+
 Last updated:
 <%= @my_hash[0]["last_updated"] %> <br>
-
+<br>
 <h4 > Description </h4>
 <%= @crypto.description %>
 <br><br>
