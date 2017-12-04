@@ -6,11 +6,11 @@
     <div class="row1">
       <div class="col-xs-12 col-sm-4">
         <div class="card1" style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2))">
-          <div class="card1-description">
+          <div class="card1-description" style=" margin-left: 10px; ">
             <h2><%=crypto.name%></h2>
             <p style="font-size: 12px;"><%= crypto.address%></p>
+            <%= link_to t(".button", default: "Take a look"), crypto_path(crypto), class: "card-link" %>
           </div>
-          <%= link_to t(".button", default: "Take a look"), crypto_path(crypto), class: "card-link" %>
         </div>
       </div>
       <% end %>
