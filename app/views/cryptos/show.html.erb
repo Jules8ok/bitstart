@@ -17,26 +17,26 @@ JSON.parse(response)
 <div style="margin-left: 10%">
 <br>
 <br>
-<h4>Global</h4>
+
 <%= @my_hash[0]["symbol"] %> <br>
-Price BTC:
-<%= @my_hash[0]["price_btc"] %> <br>
-Price USD:
-<%= @my_hash[0]["price_usd"] %> <br>
-24h volume USD:
-<%= @my_hash[0]["24h_volume_usd"] %> <br>
-Market cap USD:
-<%= @my_hash[0]["market_cap_usd"] %> <br>
+
+<%= @my_hash[0]["price_btc"] %> BTC <br>
+
+<%= @my_hash[0]["price_usd"] %> $ <br>
+24h volume:
+<%= @my_hash[0]["24h_volume_usd"] %> $ <br>
+Market cap:
+<%= @my_hash[0]["market_cap_usd"] %> $ <br>
 Available Supply:
 <%= @my_hash[0]["available_supply"] %> <br>
 Total Supply:
 <%= @my_hash[0]["total_supply"] %> <br>
 Percent change 1H:
-<%= @my_hash[0]["percent_change_1h"] %> <br>
+<%= @my_hash[0]["percent_change_1h"] %> %<br>
 Percent change 24h:
-<%= @my_hash[0]["percent_change_24h"] %> <br>
+<%= @my_hash[0]["percent_change_24h"] %> %<br>
 Percent change 7days:
-<%= @my_hash[0]["percent_change_7d"] %> <br>
+<%= @my_hash[0]["percent_change_7d"] %> %<br>
 Last updated:
 <%= @my_hash[0]["last_updated"] %> <br>
 
