@@ -28,9 +28,9 @@ JSON.parse(response)
 
             <div class="card1-description" style=" margin-left: 10px;">
               <h4><%=crypto.name%></h4>
-              <span style=" font-size: 16px;"><%= @my_hash[0]["price_usd"] %> $</span>
-              <p style="font-size: 12px;"><%= crypto.address%></p>
-              <p style="font-size: 12px;">1H:
+              <span style=" font-size: 14px;"><%= @my_hash[0]["price_usd"] %> $</span>
+              <p style="font-size: 11px;"><%= crypto.address%></p>
+              <p style="font-size: 11px;">1H:
                 <% if @my_hash[0]["percent_change_1h"][0] == "-"%>
                 <span style="color: red;">
                   <%= @my_hash[0]["percent_change_1h"] %>%
