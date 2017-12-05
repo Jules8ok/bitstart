@@ -2,7 +2,7 @@
 require 'net/http'
 require 'json'
 %>
-<br><br>
+<br><br><br><br>
 
 <h2 class="text-center searchby1">Les cryptos <br><br><br></h2>
 <% sorted = @cryptos.sort_by { |k| k["name"] } %>
@@ -77,8 +77,32 @@ JSON.parse(response)
 <% end %>
 
 
+
+
+<div class="wrapper-grey padded">
+  <div class="container1">
+    <div class="row1">
+      <div class="col-xs-12 col-sm-4 col-md-3">
+        <div class="card1" style="margin-top: 10px;background-color:white;">
+          <div class="first-line" style="display: flex;justify-content:space-between;" >
+            <div class="card1-description" style=" margin-left: 10px;">
+              <h4><br></h4>
+              <span style=" font-size: 14px;"><%= link_to "Add a new crypto", new_crypto_path %> <br> <br></span>
+              <p style="font-size: 11px;"><br></p>
+              <p style="font-size: 11px;">
+
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
 <br> <br> <br><br> <br> <br><br> <br> <br> <br> <br> <br><br> <br>
-<%= link_to "Add a new crypto", new_crypto_path %>
+
 <br> <br> <br><br> <br> <br><br> <br> <br> <br> <br> <br><br> <br>
 <style>
 .card1 {
