@@ -32,7 +32,7 @@ class CryptosController < ApplicationController
   end
   private
   def crypto_params
-    params.require(:crypto).permit(:name,:description, :address, :date)
+    params.require(:crypto).permit(:name,:description, :address, :date, :photo, :photo_cache)
   end
   def set_crypto
     @crypto = Crypto.find(params[:id])

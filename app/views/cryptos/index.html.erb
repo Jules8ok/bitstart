@@ -5,7 +5,6 @@ require 'json'
 %>
 
 
-
 <h2 class="text-center searchby1">Les cryptos <br><br><br></h2>
 <% sorted = @cryptos.sort_by { |k| k["name"] } %>
 <% sorted.each do |crypto| %>
