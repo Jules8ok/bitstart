@@ -22,34 +22,52 @@ JSON.parse(response)
     <div class="row1">
       <div class="col-xs-12 col-sm-4">
         <div class="card1" style="margin-top: 10px;background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2))">
-          <div class="card1-description" style=" margin-left: 10px;">
-            <h2><%=crypto.name%> </h2>
-            <span style=" font-size: 16px;"><%= @my_hash[0]["price_usd"] %> $</span>
-            <p style="font-size: 12px;"><%= crypto.address%></p>
-            <p style="font-size: 12px;">1H:
-<% if @my_hash[0]["percent_change_1h"][0] == "-"%>
-<span style="color: red;">
-<%= @my_hash[0]["percent_change_1h"] %>%</span>
-<% else%>
-<span style="color: green;">
-<%= @my_hash[0]["percent_change_1h"] %>%</span>
-<%end %>
-24h:
-<% if @my_hash[0]["percent_change_24h"][0] == "-"%>
-<span style="color: red;">
-<%= @my_hash[0]["percent_change_24h"] %>%</span>
-<% else%>
-<span style="color: green;">
-<%= @my_hash[0]["percent_change_24h"] %>%</span>
-<%end %>
-7days:
-<% if @my_hash[0]["percent_change_7d"][0] == "-"%>
-<span style="color: red;">
-<%= @my_hash[0]["percent_change_7d"] %>%</span>
-<% else%>
-<span style="color: green;">
-<%= @my_hash[0]["percent_change_7d"] %>%</span>
-<%end %></p>
+
+          <div class="first-line" style="display: flex;justify-content:space-between;" >
+
+
+            <div class="card1-description" style=" margin-left: 10px;">
+              <h2><%=crypto.name%> </h2>
+              <span style=" font-size: 16px;"><%= @my_hash[0]["price_usd"] %> $</span>
+              <p style="font-size: 12px;"><%= crypto.address%></p>
+              <p style="font-size: 12px;">1H:
+                <% if @my_hash[0]["percent_change_1h"][0] == "-"%>
+                <span style="color: red;">
+                  <%= @my_hash[0]["percent_change_1h"] %>%
+                </span>
+                <% else%>
+                <span style="color: green;">
+                  <%= @my_hash[0]["percent_change_1h"] %>%
+                </span>
+                <%end %>
+                24h:
+                <% if @my_hash[0]["percent_change_24h"][0] == "-"%>
+                <span style="color: red;">
+                  <%= @my_hash[0]["percent_change_24h"] %>%
+                </span>
+                <% else%>
+                <span style="color: green;">
+                  <%= @my_hash[0]["percent_change_24h"] %>%
+                </span>
+                <%end %>
+                7days:
+                <% if @my_hash[0]["percent_change_7d"][0] == "-"%>
+                <span style="color: red;">
+                  <%= @my_hash[0]["percent_change_7d"] %>%
+                </span>
+                <% else%>
+                <span style="color: green;">
+                  <%= @my_hash[0]["percent_change_7d"] %>%
+                </span>
+                <%end %>
+              </p>
+            </div>
+
+            <div style="margin-top: 10px; margin-right: 10px;">
+              <%= cl_image_tag crypto.photo, height: 37, width: 50, crop: :scale %>
+            </div>
+
+
           </div>
         </div>
       </div>
