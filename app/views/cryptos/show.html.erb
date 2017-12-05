@@ -17,16 +17,15 @@ JSON.parse(response)
   <br>
   <br>
 
-  <div class="first-line" style="display: flex;justify-content:space-between;" >
+  <div class="first-line" style="display: flex;justify-content:space-between; background-color:white; padding: 20px 20px 10px 20px; " >
 
 
     <div class="first-one" >
-      <%= @my_hash[0]["symbol"] %> <br>
 
-      <%= @my_hash[0]["price_btc"] %> BTC <br>
 
-      <%= @my_hash[0]["price_usd"] %> $ <br>
-      Percent change 1H:
+
+      <%= @my_hash[0]["symbol"] %>
+      Percent change; <br><br> 1H:
       <% if @my_hash[0]["percent_change_1h"][0] == "-"%>
       <span style="color: red;">
         <%= @my_hash[0]["percent_change_1h"] %>%
@@ -36,7 +35,7 @@ JSON.parse(response)
         <%= @my_hash[0]["percent_change_1h"] %>%
       </span> <br>
       <%end %>
-      Percent change 24h:
+      24h:
       <% if @my_hash[0]["percent_change_24h"][0] == "-"%>
       <span style="color: red;">
         <%= @my_hash[0]["percent_change_24h"] %>%
@@ -46,7 +45,7 @@ JSON.parse(response)
         <%= @my_hash[0]["percent_change_24h"] %>%
       </span> <br>
       <%end %>
-      Percent change 7days:
+      7days:
       <% if @my_hash[0]["percent_change_7d"][0] == "-"%>
       <span style="color: red;">
         <%= @my_hash[0]["percent_change_7d"] %>%
@@ -56,18 +55,19 @@ JSON.parse(response)
         <%= @my_hash[0]["percent_change_7d"] %>%
       </span> <br>
       <%end %>
-      24h volume:
-      <%= @my_hash[0]["24h_volume_usd"] %> $ <br>
-      Market cap:
-      <%= @my_hash[0]["market_cap_usd"] %> $ <br>
-      Available Supply:
-      <%= @my_hash[0]["available_supply"] %> <br>
-      Total Supply:
-      <%= @my_hash[0]["total_supply"] %> <br>
+    </div>
 
-      Last updated:
-      <%= @my_hash[0]["last_updated"] %> <br>
+    <div class="first-one-one-one"  >
+
+
+      <span style="">
+        <%= @crypto.name %> price;
+        <br><br>
+       BTC <%= @my_hash[0]["price_btc"] %>
       <br>
+       $  <%= @my_hash[0]["price_usd"] %>
+      <br>
+      </span>
     </div>
 
 
@@ -81,7 +81,7 @@ JSON.parse(response)
   </div>
 
 
-
+<br><br>
 
   <h4 > Description </h4>
   <div style="white-space: pre-line;"><%= @crypto.description %></div>
