@@ -1,9 +1,8 @@
 <%
 require 'net/http'
 require 'json'
-
 %>
-
+<br><br>
 
 <h2 class="text-center searchby1">Les cryptos <br><br><br></h2>
 <% sorted = @cryptos.sort_by { |k| k["name"] } %>
