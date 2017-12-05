@@ -88,7 +88,6 @@ GEM
       sass (>= 3.2)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
-    google-webfonts-rails (0.0.1)
     hashie (3.5.6)
     http-cookie (1.0.3)
       domain_name (~> 0.5)
@@ -250,7 +249,6 @@ DEPENDENCIES
   devise
   figaro
   font-awesome-sass
-  google-webfonts-rails
   jbuilder (~> 2.0)
   jquery-rails
   listen (~> 3.0.5)
