@@ -89,7 +89,9 @@ JSON.parse(response)
   <div style="white-space: pre-line;"><%= @crypto.notice %></div>
   <br><br>
   <h4 > Website </h4>
-  <div style="white-space: pre-line;"><a href="<%= @crypto.website %>" target=_blank><%= @crypto.website %></a><%= @crypto.website %></div>
+  <a href="<%= @crypto.website %>" target=_blank>
+  <div style="white-space: pre-line;"><%= @crypto.website %></div>
+  </a>
   <br><br>
   <h4 > Dates </h4>
   <div style="white-space: pre-line;"><%= @crypto.date %></div>
