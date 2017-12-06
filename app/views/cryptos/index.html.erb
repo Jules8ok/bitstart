@@ -23,11 +23,25 @@ JSON.parse(response)
         <div class="card1" style="margin-top: 10px;background-color:white;">
 
           <div class="first-line" style="display: flex;justify-content:space-between;" >
+            <% if @my_hash.first.count == 2 %>
+            <div class="card1-description" style=" margin-left: 10px;">
+              <h4><%=crypto.name%></h4>
+              <span style=" font-size: 14px;">Not found $</span>
+              <p style="font-size: 11px;"><%= crypto.address%></p>
+              <p style="font-size: 11px;">Change the name please.</p>
 
+            </div>
+            <% else %>
 
             <div class="card1-description" style=" margin-left: 10px;">
               <h4><%=crypto.name%></h4>
+
+
+
               <span style=" font-size: 14px;"><%= @my_hash[0]["price_usd"] %> $</span>
+
+
+
               <p style="font-size: 11px;"><%= crypto.address%></p>
               <p style="font-size: 11px;">1H:
                 <% if @my_hash[0]["percent_change_1h"][0] == "-"%>
@@ -66,7 +80,7 @@ JSON.parse(response)
               <%= cl_image_tag crypto.photo, height: 50, width: 50, crop: :scale %>
             </div>
 
-
+            <% end %>
           </div>
         </div>
       </div>

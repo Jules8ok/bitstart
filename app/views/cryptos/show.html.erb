@@ -10,12 +10,18 @@ JSON.parse(response)
 @my_hash = JSON.parse(response)
 %>
 
+
 <br><br><br><br>
 
 <h3 class="text-center" ><%= @crypto.name %> </h3>
 <div style="margin-left: 10%; margin-right: 10%;">
   <br>
   <br>
+
+  <% if response == "{\n    \"error\": \"id not found\"\n}" %>
+  Le nom de la crypto est incorrecte, il doit être similaire que celui sur <a href="https://coinmarketcap.com/">Coinmarketcap</a>. <br>
+  <%= link_to "Modifie", edit_crypto_path %> le nom, si il y a un espace remplace le par un "-". Exemple pour Bitcoin cash => bitcoin-cash. Merci <br><br>
+  <% else %>
 
   <div class="first-line" style="display: flex;justify-content:space-between; background-color:white; padding: 20px 20px 10px 20px; " >
 
@@ -80,6 +86,8 @@ JSON.parse(response)
   </div>
 
 
+
+
   <br><br>
 
   <h4 > Description </h4>
@@ -90,7 +98,7 @@ JSON.parse(response)
   <br><br>
   <h4 > Website </h4>
   <a href="<%= @crypto.website %>" target=_blank>
-  <div style="white-space: pre-line;"><%= @crypto.website %></div>
+    <div style="white-space: pre-line;"><%= @crypto.website %></div>
   </a>
   <br><br>
   <h4 > Dates </h4>
@@ -99,6 +107,11 @@ JSON.parse(response)
   <%= link_to "Edit", edit_crypto_path %> |
   <%= link_to "Back", cryptos_path %>
 
+
+  <% end %>
+  <br>
+  <%= link_to "Edit", edit_crypto_path %> |
+  <%= link_to "Back", cryptos_path %>
 </div>
 
 <style>
