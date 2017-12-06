@@ -86,6 +86,13 @@ JSON.parse(response)
   <h4 > Description </h4>
   <div style="white-space: pre-line;"><%= @crypto.description %></div>
   <br><br>
+  <h4 > Remarque personnelle </h4>
+  <div style="white-space: pre-line;"><%= @crypto.Personal %></div>
+  <br><br>
+  <h4 > Siteweb </h4>
+
+  <div style="white-space: pre-line;">  <a href="<%= @crypto.Web %>"><%= @crypto.Web %></a></div>
+  <br><br>
   <h4 > Dates </h4>
   <%= @crypto.date %>
   <br><br>
