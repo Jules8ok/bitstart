@@ -59,7 +59,6 @@ JSON.parse(response)
 
     <div class="first-one-one-one"  >
 
-
       <span style="">
         <%= @crypto.name %> price;
         <br><br>
@@ -87,11 +86,11 @@ JSON.parse(response)
   <div style="white-space: pre-line;"><%= @crypto.description %></div>
   <br><br>
   <h4 > Remarque personnelle </h4>
-  <div style="white-space: pre-line;"><%= @crypto.Personal %></div>
+  <div style="white-space: pre-line;"><%= @crypto.personal %></div>
   <br><br>
   <h4 > Siteweb </h4>
 
-  <div style="white-space: pre-line;">  <a href="<%= @crypto.Web %>"><%= @crypto.Web %></a></div>
+  <div style="white-space: pre-line;">  <a href="<%= @crypto.web %>"><%= @crypto.web %></a></div>
   <br><br>
   <h4 > Dates </h4>
   <%= @crypto.date %>
