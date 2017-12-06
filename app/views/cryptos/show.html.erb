@@ -62,10 +62,10 @@ JSON.parse(response)
       <span style="">
         <%= @crypto.name %> price;
         <br><br>
-       BTC <%= @my_hash[0]["price_btc"] %>
-      <br>
-       $  <%= @my_hash[0]["price_usd"] %>
-      <br>
+        BTC <%= @my_hash[0]["price_btc"] %>
+        <br>
+        $  <%= @my_hash[0]["price_usd"] %>
+        <br>
       </span>
     </div>
 
@@ -80,13 +80,16 @@ JSON.parse(response)
   </div>
 
 
-<br><br>
+  <br><br>
 
   <h4 > Description </h4>
   <div style="white-space: pre-line;"><%= @crypto.description %></div>
   <br><br>
   <h4 > Remarque </h4>
   <div style="white-space: pre-line;"><%= @crypto.notice %></div>
+  <br><br>
+  <h4 > Website </h4>
+  <div style="white-space: pre-line;"><a href="<%= @crypto.website %>" target=_blank><%= @crypto.website %></a></div>
   <br><br>
   <h4 > Dates </h4>
   <div style="white-space: pre-line;"><%= @crypto.date %></div>
